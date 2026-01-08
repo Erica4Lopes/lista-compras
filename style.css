@@ -3,7 +3,7 @@
     padding: 0; 
     list-style: none; 
     box-sizing: border-box; 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body { 
@@ -20,11 +20,13 @@ body {
     border: 2px solid rgb(163, 85, 111); 
     border-radius: 10px; 
     max-width: 900px; 
+    width: 90%;
+    padding: 20px;
 }
 
 h1 {
     font-size: 50px;
-    color: rgb(163, 85, 111);
+    color: rgb(100, 52, 68);
     margin: 20px;
 }
 
@@ -37,8 +39,8 @@ h1 {
 }
 
 #itemInput {
-    width: 200px;
-    padding: 5px;
+    width: 300px;
+    padding: 10px 15px;
     border: 2px solid rgb(163, 85, 111);
     border-radius: 20px;
     font-size: 16px;
@@ -50,16 +52,54 @@ h1 {
 }
 
 #addBtn {
-    width: 200px;
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
     color: rgb(163, 85, 111);
     background-color: rgb(255, 208, 216);
     border: 2px solid rgb(163, 85, 111);
     border-radius: 20px;
-    padding: 6px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #addBtn:hover {
+    background-color: rgb(100, 52, 68);
+    color: rgb(255, 208, 216);
+    border: 2px solid rgb(255, 208, 216);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#shoppingList li {
+    background-color: rgb(255, 208, 216);
+    padding: 15px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(163, 85, 111);
+}
+
+.delete-btn {
+    width: 30px;
+    height: 30px;
+    color: rgb(163, 85, 111);
+    background-color: rgb(255, 208, 216);
+    border: 2px solid rgb(163, 85, 111);
+    border-radius: 50%;
+    padding: 3px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
     background-color: rgb(100, 52, 68);
     color: rgb(255, 208, 216);
     border: 2px solid rgb(255, 208, 216);
