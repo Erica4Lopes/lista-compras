@@ -18,48 +18,55 @@ body {
     background-color: palevioletred; 
     text-align: center; 
     border: 2px solid rgb(163, 85, 111); 
-    border-radius: 10px; 
-    max-width: 900px; 
+    border-radius: 15px; 
+    max-width: 500px; 
     width: 90%;
-    padding: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 42px;
     color: rgb(100, 52, 68);
-    margin: 20px;
+    margin-bottom: 25px;
 }
 
 .input-container {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 #itemInput {
-    width: 300px;
-    padding: 10px 15px;
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 18px;
     border: 2px solid rgb(163, 85, 111);
-    border-radius: 20px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 17px;
+    background-color: rgb(255, 240, 245);
+    transition: all 0.3s ease;
 }
 
 #itemInput:focus {
     outline: none;
     border: 2px solid rgb(100, 52, 68);
+    background-color: white;
+    box-shadow: 0 0 8px rgba(100, 52, 68, 0.3);
 }
 
 #addBtn {
-    width: 300px;
-    padding: 10px;
-    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    font-size: 17px;
     font-weight: bold;
     color: rgb(163, 85, 111);
     background-color: rgb(255, 208, 216);
     border: 2px solid rgb(163, 85, 111);
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -68,39 +75,68 @@ h1 {
     background-color: rgb(100, 52, 68);
     color: rgb(255, 208, 216);
     border: 2px solid rgb(255, 208, 216);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#addBtn:active {
+    transform: translateY(0);
 }
 
 .completed {
     text-decoration: line-through;
     opacity: 0.6;
+    color: rgb(100, 52, 68);
+}
+
+#shoppingList {
+    padding: 0 10px;
 }
 
 #shoppingList li {
-    background-color: rgb(255, 208, 216);
-    padding: 15px;
-    margin: 10px 20px;
-    border-radius: 10px;
+    background-color: rgb(255, 240, 245);
+    padding: 16px 20px;
+    margin: 12px 0;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 2px solid rgb(163, 85, 111);
+    transition: all 0.2s ease;
+}
+
+#shoppingList li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#shoppingList li span {
+    cursor: pointer;
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
 }
 
 .delete-btn {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     color: rgb(163, 85, 111);
-    background-color: rgb(255, 208, 216);
+    background-color: transparent;
     border: 2px solid rgb(163, 85, 111);
     border-radius: 50%;
-    padding: 3px;
-    margin: 3px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .delete-btn:hover {
     background-color: rgb(100, 52, 68);
     color: rgb(255, 208, 216);
-    border: 2px solid rgb(255, 208, 216);
+    border: 2px solid rgb(100, 52, 68);
+    transform: rotate(90deg);
 }
